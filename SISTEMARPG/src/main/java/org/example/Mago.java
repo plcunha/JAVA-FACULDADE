@@ -1,7 +1,7 @@
 package org.example;
 
 public class Mago extends Personagem {
-    private int mana;
+    protected int mana;
     private int poderMagico;
 
     public Mago(String nome, int nivel, int hp, int atk, int def, int mana, int poderMagico) {

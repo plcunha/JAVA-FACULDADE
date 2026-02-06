@@ -2,11 +2,9 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class SistemaGestaoFuncionarios {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         List<Funcionario> funcionarios = new ArrayList<>();
 
         funcionarios.add(new FuncionarioTempoIntegral("João", "123.456.789-00", 5000, 10));
@@ -19,7 +17,5 @@ public class SistemaGestaoFuncionarios {
             System.out.println("Salário: " + funcionario.calcularSalario());
             System.out.println();
         }
-
-        scanner.close();
     }
 }

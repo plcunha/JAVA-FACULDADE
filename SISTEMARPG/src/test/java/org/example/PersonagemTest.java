@@ -7,7 +7,7 @@ class PersonagemTest {
 
     @Test
     void testAtacar() {
-        Personagem atacante = new Guerreiro("Thorin", 10, 100, 20, 10, 5, 2);
+        Personagem atacante = new Personagem("Thorin", 10, 100, 20, 10);
         Personagem defensor = new Mago("Gandalf", 10, 80, 15, 5, 50, 25);
         atacante.atacar(defensor);
         assertTrue(defensor.hp > 0);
@@ -27,3 +27,4 @@ class PersonagemTest {
         personagem.receberDano(100);
         assertEquals(0, personagem.hp);
     }
+}

@@ -1,8 +1,10 @@
-public class pontuacao {
+package org.example;
+
+public class Pontuacao {
 
     private int pontuacao;
 
-    public pontuacao() {
+    public Pontuacao() {
         this.pontuacao = 0;
     }
 
@@ -30,15 +32,15 @@ public class pontuacao {
     }
 
     public static void main(String[] args) {
-        pontuacao p = new pontuacao();
+        Pontuacao p = new Pontuacao();
 
         p.adicionarPontos(10);
-        System.out.println("Pontuação atual: " + p.getPontuacao()); // Should print 10
+        System.out.println("Pontuação atual: " + p.getPontuacao());
 
         p.removerPontos(5);
-        System.out.println("Pontuação atual: " + p.getPontuacao()); // Should print 5
+        System.out.println("Pontuação atual: " + p.getPontuacao());
 
         p.removerPontos(10);
-        System.out.println("Pontuação atual: " + p.getPontuacao()); // Should print 0
+        System.out.println("Pontuação atual: " + p.getPontuacao());
     }
 }

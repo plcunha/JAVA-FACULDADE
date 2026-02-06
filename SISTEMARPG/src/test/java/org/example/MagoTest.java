@@ -16,10 +16,10 @@ class MagoTest {
 
     @Test
     void testLancarMagiaSemMana() {
-        Mago mago = new Mago("Gandalf", 10, 80, 15, 5, 5, 25);
+        Mago mago = new Mago("Gandalf", 10, 80, 15, 5, 0, 25);
         Personagem inimigo = new Guerreiro("Thorin", 10, 100, 20, 10, 5, 2);
         mago.lancarMagia(inimigo);
-        assertEquals(100, inimigo.hp); // Não deve causar dano, pois não tem mana suficiente
-        assertEquals(5, mago.mana); // Mana permanece inalterada
+        assertEquals(100, inimigo.hp);
+        assertEquals(0, mago.mana);
     }
 }

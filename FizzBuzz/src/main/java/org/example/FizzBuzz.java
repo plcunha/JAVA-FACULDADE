@@ -1,10 +1,7 @@
 package org.example;
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
-
 public class FizzBuzz {
-    private int maxValue;
+    private final int maxValue;
 
     public FizzBuzz(int maxValue) {
         this.maxValue = maxValue;
@@ -16,11 +13,12 @@ public class FizzBuzz {
     }
 
     public void play() {
-        for (int i = 1; i <= maxValue; i++) System.out.println(getFizzBuzzValue(i));
+        for (int i = 1; i <= maxValue; i++) {
+            System.out.println(getFizzBuzzValue(i));
+        }
     }
 
-    @Contract(pure = true)
-    private @NotNull String getFizzBuzzValue(int number) {
+    private String getFizzBuzzValue(int number) {
         if (number % 3 == 0 && number % 5 == 0) {
             return "FizzBuzz";
         } else if (number % 3 == 0) {
